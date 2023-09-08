@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  height: 99.8vh;
+}
+
+label {
+  font-size: .9rem;
+}
+
+.name {
+  position: relative;
+  right: 10%;
+  padding-bottom: 5%;
+}
+
+.title {
+  display: flex;
+  height: 6vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.title p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.panel {
+  margin-top: 3%;
+  margin-left: 3%;
+  background-color: #f8efadfa;
+  border-radius: 5px;
+  height: 60vh;
+  width: 18%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.colours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 21vh;
+  padding-left: 10%;
+}
+
+/* Input styling */
+#swatch {
+  margin-top: 1%;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  width: 3.453em;
+  margin-left: 9%;
+  border-radius: 1.5px;
+  overflow: hidden;
+}
+
+
+.info {
+  padding-left: 2%;
+  background-color: rgba(245, 245, 245, 0.795);
+}
+
+#swatch h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#swatch h2 {
+  margin: 0;
+}
+
+input[type="color"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 3em;
+  padding: 0;
+  width: 4.18em;
+}
+
+*:focus {
+  border-radius: 0;
+  outline: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch {
+  border: 0;
+  border-radius: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+  border: 0;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+}
+
+/* Radio btn */
+
+.mydict div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked+span {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #dee7ff;
+  z-index: 1;
+  color: #0043ed;
+}
+
+label span {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.375em .75em;
+  position: relative;
+  margin-left: .0625em;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #3e4963;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+label:first-child span {
+  border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+  border-radius: 0 .375em .375em 0;
+}
+
+/* Generate btn */
+.genbtn {
+  margin-top: 7%;
+  text-align: center;
+
+}
+
+#gen {
+  font-size: 17px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: ease(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+
+}
+
+.copybtn {
+  text-align: center;
+  margin-top: 3%;
+}
+
+#gen:focus,
+#gen:hover {
+  color: black;
+}
+
+#gen:focus:after,
+#gen:hover:after {
+  width: 100%;
+  min-height: .3vh;
+  left: 0%;
+}
+
+#gen:after {
+  content: "";
+  pointer-events: none;
+  bottom: -1px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  border: none;
+  background-color: black;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+/* Export Btn */
+.exportbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+#cardbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+#cardbtn:hover {
+  color: #6f2b3e;
+  font-size: 1.12rem;
+}
+
+                                                                  /* M E D I A  Q U E R I E S */
+@media(max-width:1242px) {
+  .panel {
+    height: 50vh;
+    width: 19.5%;
+  }
+
+  #swatch {
+    width: 3.253em;
+    height: 7.3vh;
+  }
+
+  label {
+    font-size: .8rem;
+  }
+
+  .colours {
+    height: 15vh;
+  }
+
+  .title p {
+    font-size: 1.1rem;
+  }
+
+  #gen {
+    font-size: 16px;
+  }
+
+  #cardbtn {
+    font-size: 1rem;
+  }
+
+}
+
+@media(max-width:1020px) {
+  .panel {
+    height: 45vh;
+    width: 23.5%;
+  }
+}
+
+@media(max-width:840px) {
+  .panel {
+    height: 43vh;
+    width: 26.5%;
+  }
+}
+
+@media(max-width:780px) {
+  .panel {
+    height: 42vh;
+    width: 29.5%;
+  }
+
+}
+
+@media(max-width:722px) {
+  .panel {
+    height: 41vh;
+    width: 32.5%;
+  }
+}
+
+.main {
+  height: 100 vh;
+}
+
+.mydict div {
+  margin-top: -0.1rem;
+}
+
+@media(max-width:612px) {
+  .panel {
+    width: 36.5%;
+  }
+
+  .info {
+    font-size: 80%;
+  }
+}
+
+@media(max-width:540px) {
+  .panel {
+    width: 40.5%;
+    height: 37vh;
+  }
+
+  #swatch {
+    width: 2.75em;
+    height: 7.2vh;
+  }
+
+  label {
+    font-size: .7rem;
+  }
+
+  .info {
+    font-size: 60%;
+  }
+
+  .colours {
+    height: 11vh;
+  }
+
+  .title p {
+    font-size: .9rem;
+  }
+
+  #gen {
+    font-size: 13px;
+  }
+
+  #cardbtn {
+    font-size: .8rem;
+  }
+
+}
+
+@media(max-width:430px) {
+  .panel {
+    width: 44%;
+  }
+}
+
+@media(max-width:395px) {
+  .panel {
+    width: 48%;
+  }
+}
